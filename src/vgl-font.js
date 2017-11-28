@@ -15,7 +15,7 @@ export default {
             handler(src) {
                 new FontLoader().load(src, (font) => {
                     this.inst = font;
-                });
+                }, () => {}, (event) => {throw event;});
             },
             immediate: true
         }
